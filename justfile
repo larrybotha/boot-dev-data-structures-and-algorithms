@@ -1,7 +1,5 @@
-# https://just.systems
-
 default:
-    echo 'Hello, world!'
+    just --list
 
 watch filename:
     #!/usr/bin/env bash
