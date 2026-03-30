@@ -23,10 +23,15 @@ https://www.boot.dev/lessons/f42d132b-ddaa-4461-9b43-26e662e46197
 - log scaling is the use of logs to make logarithmic data more easily digestible,
   e.g. by scaling a logarithmic sequence into a linear sequence
 
+## Ch 3. Big-O Analysis
+
 | 5^n | log2(n) |
 | --- | ------- |
 | 5   | 1       |
 | 25  | 2       |
 | 125 | 3       |
 | 625 | 4       |
+
+- `O(log(n))` is only a little slower than `O(1)` / constant time
+- binary search is a `O(log(n))` algorithm
 
