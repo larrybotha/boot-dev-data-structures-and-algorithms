@@ -35,3 +35,29 @@ https://www.boot.dev/lessons/f42d132b-ddaa-4461-9b43-26e662e46197
 - `O(log(n))` is only a little slower than `O(1)` / constant time
 - binary search is a `O(log(n))` algorithm
 
+## Ch 4. Sorting algorithms
+
+### Bubble sort
+
+[./ch-04/\_02_bubble_sort.py](./ch-04/_02_bubble_sort.py)
+
+- compare adjacent values in a list, sorting them until we get to the end of
+  the list
+- Complexity: `O(n^2)`
+- Performance:
+  - best case, `O(n)` - evaluate each index once, no change
+  - worst case, `O(n^2)` - n + (n - 1) + ... + 1 - evaluate every index more
+    than once, swap every value
+
+Algorithm:
+
+- set `Swapping` to true
+- set `end` to the length of the list
+- while `Swapping` is true:
+  - set `Swapping` to false
+  - for `i` from index 1 to `end`
+    - if value at `i - 1` is gt value at `i`, swap positions
+    - set `Swapping` to true
+  - decrement `end` by 1
+- return list
+
