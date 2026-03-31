@@ -1,6 +1,6 @@
 # boot-dev-data-structures-and-algorithms
 
-https://www.boot.dev/lessons/f42d132b-ddaa-4461-9b43-26e662e46197
+[https://www.boot.dev/lessons/f42d132b-ddaa-4461-9b43-26e662e46197](https://www.boot.dev/lessons/f42d132b-ddaa-4461-9b43-26e662e46197)
 
 ## Ch 2. Math
 
@@ -61,3 +61,32 @@ Algorithm:
   - decrement `end` by 1
 - return list
 
+### Merge sort
+
+- comprised of 2 functions:\
+  - `merge_sort`: function that splits array into halves
+  - `merge`: function that takes 2 sorted arrays and merges them
+- Complexity: `O(n log(n))`
+- merge sort is _stable_ - i.e. duplicate values in the original list will be in
+  the same order in the resulting list
+- does not perform well on small arrays due to the memory overhead of splitting
+  arrays into smaller and smaller arrays
+- recursion can come at a cost penalty in languages that don't support tail-recursion,
+  such as Python
+
+Algorithm:
+
+- `merge_sort(xs: list) -> list`
+  - if `len(xs) < 2`, already sorted
+  - split `xs` into two arrays down the middle
+  - call itself with each array
+  - return the result of calling `merge` on the two halves
+- `merge(xs: list, ys: list) -> list`
+  - create `zs` - the final array to return
+  - set `i` and `j` to 0
+  - loop over `xs` and `ys`, comparing values
+    - if `x < y`, add `x` to `zs`, increment `i`
+    - else, add `y` to `zs`, incremen `j`
+    - continue until either list is exhausted
+  - if remaining items from `xs` or `ys`, append to `zs`
+  - return `zs`
